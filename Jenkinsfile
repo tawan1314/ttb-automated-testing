@@ -15,7 +15,7 @@ pipeline {
         stage('Install Robot Libraries') {
             steps {
                 // ติดตั้ง Library ที่จำเป็น
-                sh "python3 -m pip install --user --break-system-packages robotframework robotframework-requests"
+                sh "python3 -m pip install --user --break-system-packages robotframework robotframework-browser"
             }
         }
 
