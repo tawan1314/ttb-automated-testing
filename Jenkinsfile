@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh """
                 # ใน image python จะมี pip และ python มาให้เลย
-                pip install robotframework robotframework-requests
+                pip install robotframework robotframework-browser
                 
                 # รัน robot โดยระบุ path ไฟล์ของคุณ
                 python -m robot -d results Tests/Test_2/TEST1.robot
