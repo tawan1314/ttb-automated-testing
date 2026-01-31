@@ -2,35 +2,34 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
+        stage('Environment Scan') {
             steps {
-                // ดึงโค้ดล่าสุดจาก Git
-                checkout scm
+                script {
+                    // ลองเรียกทุกชื่อที่อาจจะเป็นไปได้
+                    sh "which python || echo 'no python'"
+                    sh "which python3 || echo 'no python3'"
+                    sh "which pip || echo 'no pip'"
+                    sh "which pip3 || echo 'no pip3'"
+                }
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Install & Run') {
             steps {
-                // ตรวจสอบและติดตั้ง Library ที่จำเป็น
-                sh "python3 -m pip install --user --break-system-packages robotframework robotframework-browser"
+                // ใช้การระบุตัวตนแบบยืดหยุ่น ถ้า python3 ไม่เจอ ให้ลองใช้ python
+                sh """
+                PYTHON_CMD=\$(which python3 || which python)
+                PIP_CMD=\$(which pip3 || which pip)
+                
+                if [ -z "\$PYTHON_CMD" ]; then
+                    echo "ERROR: Python not installed on this Jenkins node!"
+                    exit 1
+                fi
+                
+                \$PYTHON_CMD -m pip install --user robotframework robotframework-requests
+                \$PYTHON_CMD -m robot -d results Tests/Test_2/TEST1.robot
+                """
             }
-        }
-
-        stage('Run Robot Test') {
-            steps {
-                // รันไฟล์ TEST1.robot ตาม Path ใน Repository ของคุณ
-                sh "python3 -m robot -d results Tests/Test_2/TEST1.robot"
-            }
-        }
-    }
-
-    post {
-        always {
-            // เก็บผลลัพธ์และแสดง Report บนหน้า Jenkins
-            archiveArtifacts artifacts: 'results/*.html', allowEmptyArchive: true
-            
-            // ถ้าลง Plugin Robot Framework ไว้ ให้ใช้บรรทัดนี้:
-            // step([$class: 'RobotPublisher', outputPath: 'results', outputFileName: 'output.xml', reportFileName: 'report.html', logFileName: 'log.html'])
         }
     }
 }
