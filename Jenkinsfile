@@ -12,8 +12,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // ตรวจสอบและติดตั้ง Library ที่จำเป็น
-                bat "pip install robotframework"
-                bat "pip install robotframework-browser"
+                sh "pip install robotframework"
+                sh "pip install robotframework-browser"
             }
         }
 
