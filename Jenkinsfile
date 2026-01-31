@@ -20,7 +20,7 @@ pipeline {
         stage('Run Robot Test') {
             steps {
                 // รันไฟล์ TEST1.robot ตาม Path ใน Repository ของคุณ
-                bat "python -m robot -d results Tests/Test_2/TEST1.robot"
+                sh "python3 -m robot -d results Tests/Test_2/TEST1.robot"
             }
         }
     }
