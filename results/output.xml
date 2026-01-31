@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on win32)" generated="2026-01-31T04:32:40.093033" rpa="false" schemaversion="5">
+<suite id="s1" name="Ttb Test" source="C:\Users\LENOVO\Desktop\ttb_test">
+<suite id="s1-s1" name="Tests" source="C:\Users\LENOVO\Desktop\ttb_test\Tests">
+<suite id="s1-s1-s1" name="Test 3" source="C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3">
+<suite id="s1-s1-s1-s1" name="TEST2" source="C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3\TEST2.robot">
+<test id="s1-s1-s1-s1-t1" name="Test2 Get User Profile But User Not Found" line="16">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-01-31T04:32:40.235582" level="INFO">Creating Session using : alias=GET, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=GET</arg>
+<arg>url=${URL_API}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-31T04:32:40.235186" elapsed="0.000777"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-31T04:32:40.237164" level="INFO">${Headers} = {'x-api-key': 'reqres_b115aaa93cff4447b784a792553a8945'}</msg>
+<var>${Headers}</var>
+<arg>x-api-key=reqres_b115aaa93cff4447b784a792553a8945</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-31T04:32:40.236482" elapsed="0.000829"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-01-31T04:32:40.819905" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
+ path_url=/api/users/1234 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_b115aaa93cff4447b784a792553a8945'} 
+ body=None 
+ </msg>
+<msg time="2026-01-31T04:32:40.820312" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
+ status=404, reason=Not Found 
+ headers={'Date': 'Fri, 30 Jan 2026 21:32:40 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '19', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=w6DBRmAoNTEsxwjX5PsGvOjpJRQCwxp%2F4yfKWmYfNOg%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1769808760"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=w6DBRmAoNTEsxwjX5PsGvOjpJRQCwxp%2F4yfKWmYfNOg%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1769808760"', 'Server': 'cloudflare', 'Vary': 'Origin, accept-encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '100', 'X-Ratelimit-Remaining': '93', 'X-Ratelimit-Reset': '1769817600', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '7c888f15-6011-890b-3450-b8b3687c5215', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'max-age=14400', 'cf-cache-status': 'EXPIRED', 'Content-Encoding': 'gzip', 'CF-RAY': '9c6415503a7dee52-BKK'} 
+ body={} 
+ </msg>
+<msg time="2026-01-31T04:32:40.820504" level="INFO">C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-01-31T04:32:40.821222" level="INFO">${Response} = &lt;Response [404]&gt;</msg>
+<var>${Response}</var>
+<arg>alias=GET</arg>
+<arg>url=${END_POINT}</arg>
+<arg>expected_status=${Expected_Status}</arg>
+<arg>headers=${Headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-31T04:32:40.237588" elapsed="0.583863"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2026-01-31T04:32:40.823455" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'dict'&gt;</msg>
+<arg>first=${Expected_Value}</arg>
+<arg>second=${Response.json()}</arg>
+<arg>msg=❌ Result value did not match ==&gt; Expected ID: ${Expected_Value} != Actual ID: ${Response.json()}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-31T04:32:40.821996" elapsed="0.001658"/>
+</kw>
+<doc>Owner : Tawan Duangchit
+|    ***| Objective |***
+|    To verify get user profile api will return 404 not found when trying to get exist profile of not existing user
+==&gt;</doc>
+<status status="PASS" start="2026-01-31T04:32:40.231911" elapsed="0.592039"/>
+</test>
+<status status="PASS" start="2026-01-31T04:32:40.147409" elapsed="0.679808"/>
+</suite>
+<status status="PASS" start="2026-01-31T04:32:40.137871" elapsed="0.693634"/>
+</suite>
+<status status="PASS" start="2026-01-31T04:32:40.133820" elapsed="0.700457"/>
+</suite>
+<status status="PASS" start="2026-01-31T04:32:40.097515" elapsed="0.740265"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ttb Test" id="s1" pass="1" fail="0" skip="0">Ttb Test</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Ttb Test.Tests</stat>
+<stat name="Test 3" id="s1-s1-s1" pass="1" fail="0" skip="0">Ttb Test.Tests.Test 3</stat>
+<stat name="TEST2" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Ttb Test.Tests.Test 3.TEST2</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-31T04:32:40.225777" level="ERROR">Error in file 'C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3\TEST2.robot' on line 3: Variable file 'C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3\Configure.yml' does not exist.</msg>
+</errors>
+</robot>

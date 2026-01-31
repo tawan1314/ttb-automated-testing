@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on win32)" generated="2026-01-31T02:40:55.292264" rpa="false" schemaversion="5">
+<suite id="s1" name="TEST3" source="C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_2\TEST3.robot">
+<test id="s1-t1" name="TEST3 Login failed - Username not found" line="17">
+<kw name="Open Browser" owner="Browser">
+<msg time="2026-01-31T02:40:55.512774" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2026-01-31T02:40:55.513366" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\LENOVO\\Desktop\\ttb_test\\Tests\\Test_2\\Results\\TEST3\\browser\\traces\\temp\\b501714b-1af3-4cd9-882d-0dc34b8ef155"}</msg>
+<msg time="2026-01-31T02:40:55.540051" level="INFO">Starting Browser process C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53306</msg>
+<msg time="2026-01-31T02:40:56.747385" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\LENOVO\\Desktop\\ttb_test\\Tests\\Test_2\\Results\\TEST3\\browser\\traces\\temp\\b501714b-1af3-4cd9-882d-0dc34b8ef155"}</msg>
+<msg time="2026-01-31T02:40:56.749504" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-01-31T02:40:56.764199" level="INFO">Successfully created context. </msg>
+<msg time="2026-01-31T02:40:56.764285" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2026-01-31T02:40:59.691315" level="INFO">Successfully initialized new page object and opened url: http://the-internet.herokuapp.com/login</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${True}</arg>
+<arg>pause_on_failure=${False}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2026-01-31T02:40:55.512050" elapsed="4.179495"/>
+</kw>
+<kw name="Login Page - Verify Login Page">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:40:59.767104" level="INFO">Waited for Element with selector css=h2:has-text('Login Page') at state stable</msg>
+<arg>selector=${LABEL_LOGINPAGE_HEADER}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'Login header label' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.693018" elapsed="0.074257"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:40:59.800761" level="INFO">Waited for Element with selector css=h4.subheader at state stable</msg>
+<arg>selector=${LABEL_LOGINPAGE_SUBHEADER}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'Login subheader label' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.767462" elapsed="0.033439"/>
+</kw>
+<status status="PASS" start="2026-01-31T02:40:59.692153" elapsed="0.108874"/>
+</kw>
+<kw name="Login Page - Input Username And Password">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:40:59.833480" level="INFO">Waited for Element with selector css=label[for='username']:has-text('Username') at state stable</msg>
+<arg>selector=${LABEL_LOGINPAGE_USERNAME}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'username label' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.801866" elapsed="0.031763"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:40:59.866430" level="INFO">Waited for Element with selector css=input[id='username'] at state stable</msg>
+<arg>selector=${FIELD_LOGINPAGE_USERNAME}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'username input field' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.834083" elapsed="0.032493"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2026-01-31T02:40:59.867334" level="INFO">Types the text 'tomholland' in the given field.</msg>
+<arg>selector=${FIELD_LOGINPAGE_USERNAME}</arg>
+<arg>txt=${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.866752" elapsed="0.026029"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:40:59.933840" level="INFO">Waited for Element with selector css=label[for='password']:has-text('Password') at state stable</msg>
+<arg>selector=${LABEL_LOGINPAGE_PASSWORD}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'password label' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.892969" elapsed="0.041021"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:40:59.966749" level="INFO">Waited for Element with selector css=input[id='password'] at state stable</msg>
+<arg>selector=${FIELD_LOGINPAGE_PASSWORD}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'password input field' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.934166" elapsed="0.032724"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2026-01-31T02:40:59.967687" level="INFO">Types the text 'Password!' in the given field.</msg>
+<arg>selector=${FIELD_LOGINPAGE_PASSWORD}</arg>
+<arg>txt=${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.967063" elapsed="0.020720"/>
+</kw>
+<arg>username=${USERNAME}</arg>
+<arg>password=${PASSWORD}</arg>
+<status status="PASS" start="2026-01-31T02:40:59.801338" elapsed="0.186570"/>
+</kw>
+<kw name="Login Page - Click Login Button">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:41:00.017677" level="INFO">Waited for Element with selector css=button.radius:has-text(' Login') at state stable</msg>
+<arg>selector=${BUTTON_LOGINPAGE_LOGIN}</arg>
+<arg>state=stable</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<arg>message=❌ Not found 'login button' in Login Page within ${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:40:59.988669" elapsed="0.029225"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Click" owner="Browser">
+<msg time="2026-01-31T02:41:00.019121" level="INFO">Clicks the element 'css=button.radius:has-text(' Login')'.</msg>
+<arg>selector=${BUTTON_LOGINPAGE_LOGIN}</arg>
+<arg>button=left</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-31T02:41:00.018591" elapsed="0.610405"/>
+</kw>
+<status status="PASS" start="2026-01-31T02:41:00.018158" elapsed="0.610927"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Fail" owner="BuiltIn">
+<arg>msg=❌ Not found 'login button' in Login Page within ${TIMEOUT}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-01-31T02:41:00.629764" elapsed="0.000209"/>
+</kw>
+<status status="NOT RUN" start="2026-01-31T02:41:00.629166" elapsed="0.000953"/>
+</branch>
+<status status="PASS" start="2026-01-31T02:41:00.018084" elapsed="0.612133"/>
+</try>
+<status status="PASS" start="2026-01-31T02:40:59.988276" elapsed="0.642049"/>
+</kw>
+<kw name="Login Page - Validate Alert Login Failed">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-31T02:41:00.662110" level="INFO">Waited for Element with selector css=div[class='flash error'] at state visible</msg>
+<arg>selector=${LABEL_LOGINPAGE_ALERT_FAILED}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-31T02:41:00.631130" elapsed="0.031108"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-01-31T02:41:00.684362" level="INFO">Text: ' Your username is invalid!\n×'</msg>
+<msg time="2026-01-31T02:41:00.684501" level="INFO">${Result_Actual_Text} =  Your username is invalid!
+×</msg>
+<var>${Result_Actual_Text}</var>
+<arg>selector=${LABEL_LOGINPAGE_ALERT_FAILED}</arg>
+<arg>message=❌ Cannot get text from 'alert logout success label' in Login Page</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-31T02:41:00.662394" elapsed="0.022135"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-31T02:41:00.685311" level="INFO">${Actual_Alert_Text} = Your username is invalid!</msg>
+<var>${Actual_Alert_Text}</var>
+<arg>expression="""${Result_Actual_Text}""".strip().split('\\n')[0].replace('×', '').strip()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-31T02:41:00.684688" elapsed="0.000651"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>first=${Actual_Alert_Text}</arg>
+<arg>second=${LABEL_ALERT_LOGIN_FAILED}</arg>
+<arg>msg=❌ Alert text did not match\nExpected text: ${LABEL_ALERT_LOGIN_FAILED}\nActual text: ${Actual_Alert_Text}\n</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-31T02:41:00.685441" elapsed="0.000482"/>
+</kw>
+<status status="PASS" start="2026-01-31T02:41:00.630679" elapsed="0.055319"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-01-31T02:41:00.752934" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-31T02:41:00.686210" elapsed="0.066863"/>
+</kw>
+<doc>Owner : Tawan Duangchit
+|    ***| Objective |***
+|    To verify that users can login unsuccessfully when they input a username that did not exist.
+==&gt;</doc>
+<status status="PASS" start="2026-01-31T02:40:55.511113" elapsed="5.242200"/>
+</test>
+<status status="PASS" start="2026-01-31T02:40:55.293923" elapsed="5.466015"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TEST3" id="s1" pass="1" fail="0" skip="0">TEST3</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-31T02:40:55.512774" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

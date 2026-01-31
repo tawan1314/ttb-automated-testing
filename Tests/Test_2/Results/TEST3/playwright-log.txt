@@ -1,0 +1,89 @@
+{"level":30,"time":"2026-01-30T19:40:56.242Z","pid":21936,"hostname":"TAWAN","msg":"Listening on 127.0.0.1:53306"}
+{"level":30,"time":"2026-01-30T19:40:56.563Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-01-30T19:40:56.732Z","pid":21936,"hostname":"TAWAN","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
+{"level":30,"time":"2026-01-30T19:40:56.733Z","pid":21936,"hostname":"TAWAN","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-01-30T19:40:56.733Z","pid":21936,"hostname":"TAWAN","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-01-30T19:40:56.739Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-01-30T19:40:56.739Z","pid":21936,"hostname":"TAWAN","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":true,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2026-01-30T19:40:56.739Z","pid":21936,"hostname":"TAWAN","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7e4f3352c0b9dbc04dcd8d8016614837\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=1e23c1ad-f42d-4b61-ba61-34202f007476\"}"}
+{"level":30,"time":"2026-01-30T19:40:56.739Z","pid":21936,"hostname":"TAWAN","msg":"Trace file: "}
+{"level":30,"time":"2026-01-30T19:40:56.749Z","pid":21936,"hostname":"TAWAN","msg":"Setting default timeout for context context=fdc4af26-b9cf-4193-97e3-cfac2631c456 to 10000"}
+{"level":30,"time":"2026-01-30T19:40:56.749Z","pid":21936,"hostname":"TAWAN","msg":"Changed active context: context=fdc4af26-b9cf-4193-97e3-cfac2631c456"}
+{"level":30,"time":"2026-01-30T19:40:56.749Z","pid":21936,"hostname":"TAWAN","msg":"End of node method newContext"}
+{"level":30,"time":"2026-01-30T19:40:56.754Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-01-30T19:40:56.755Z","pid":21936,"hostname":"TAWAN","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7e4f3352c0b9dbc04dcd8d8016614837\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=fdc4af26-b9cf-4193-97e3-cfac2631c456\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@6c86e13253542f0ad13f8a05a002046c\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":true,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=1e23c1ad-f42d-4b61-ba61-34202f007476\"}"}
+{"level":30,"time":"2026-01-30T19:40:56.809Z","pid":21936,"hostname":"TAWAN","msg":"Video path: undefined"}
+{"level":30,"time":"2026-01-30T19:40:56.810Z","pid":21936,"hostname":"TAWAN","msg":"Changed active page"}
+{"level":30,"time":"2026-01-30T19:40:59.676Z","pid":21936,"hostname":"TAWAN","msg":"End of node method newPage"}
+{"level":30,"time":"2026-01-30T19:40:59.684Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.684Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=h2:has-text('Login Page') in page."}
+{"level":30,"time":"2026-01-30T19:40:59.753Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.756Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.756Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=h4.subheader in page."}
+{"level":30,"time":"2026-01-30T19:40:59.787Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.791Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.791Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=label[for='username']:has-text('Username') in page."}
+{"level":30,"time":"2026-01-30T19:40:59.819Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.823Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.823Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=input[id='username'] in page."}
+{"level":30,"time":"2026-01-30T19:40:59.853Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.856Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-01-30T19:40:59.856Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=input[id='username'] in page."}
+{"level":30,"time":"2026-01-30T19:40:59.879Z","pid":21936,"hostname":"TAWAN","msg":"End of node method typeText"}
+{"level":30,"time":"2026-01-30T19:40:59.882Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.882Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=label[for='password']:has-text('Password') in page."}
+{"level":30,"time":"2026-01-30T19:40:59.920Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.923Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.923Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=input[id='password'] in page."}
+{"level":30,"time":"2026-01-30T19:40:59.953Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.956Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-01-30T19:40:59.956Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=input[id='password'] in page."}
+{"level":30,"time":"2026-01-30T19:40:59.974Z","pid":21936,"hostname":"TAWAN","msg":"End of node method typeText"}
+{"level":30,"time":"2026-01-30T19:40:59.977Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:40:59.977Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=button.radius:has-text(' Login') in page."}
+{"level":30,"time":"2026-01-30T19:41:00.003Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:41:00.007Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method click"}
+{"level":30,"time":"2026-01-30T19:41:00.007Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=button.radius:has-text(' Login') in page."}
+{"level":30,"time":"2026-01-30T19:41:00.615Z","pid":21936,"hostname":"TAWAN","msg":"End of node method click"}
+{"level":30,"time":"2026-01-30T19:41:00.620Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:41:00.620Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=div[class='flash error'] in page."}
+{"level":30,"time":"2026-01-30T19:41:00.648Z","pid":21936,"hostname":"TAWAN","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-01-30T19:41:00.651Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method getText"}
+{"level":30,"time":"2026-01-30T19:41:00.651Z","pid":21936,"hostname":"TAWAN","msg":"Strict mode is enabled, find Locator with css=div[class='flash error'] in page."}
+{"level":30,"time":"2026-01-30T19:41:00.670Z","pid":21936,"hostname":"TAWAN","msg":"Retrieved text for element css=div[class='flash error'] containing  Your username is invalid!\n×"}
+{"level":30,"time":"2026-01-30T19:41:00.670Z","pid":21936,"hostname":"TAWAN","msg":"End of node method getText"}
+{"level":30,"time":"2026-01-30T19:41:00.675Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-01-30T19:41:00.678Z","pid":21936,"hostname":"TAWAN","msg":"Removed page=d4812aee-5da4-4534-8a78-0f13d4602c6c from context=fdc4af26-b9cf-4193-97e3-cfac2631c456 page stack"}
+{"level":30,"time":"2026-01-30T19:41:00.739Z","pid":21936,"hostname":"TAWAN","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-30T19:41:00.745Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-30T19:41:00.746Z","pid":21936,"hostname":"TAWAN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-01-30T19:41:00.750Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-30T19:41:00.750Z","pid":21936,"hostname":"TAWAN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-01-30T19:41:00.781Z","pid":21936,"hostname":"TAWAN","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-01-30T19:41:00.781Z","pid":21936,"hostname":"TAWAN","msg":"End of node method closeAllBrowsers"}

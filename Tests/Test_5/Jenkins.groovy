@@ -1,0 +1,15 @@
+pipeline {
+    agent {-----}
+    stages {
+        stage('Checkout Code From Git') {
+        }
+    }
+    stages {
+        stage('Run Test Automate') {
+        }
+    }
+    stages {
+        stage('Send Result To Jenkins') {
+        }
+    }
+}
