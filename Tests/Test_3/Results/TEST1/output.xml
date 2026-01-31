@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on win32)" generated="2026-01-31T04:33:27.028665" rpa="false" schemaversion="5">
+<suite id="s1" name="TEST1" source="C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3\TEST1.robot">
+<test id="s1-t1" name="Test1 Get User Profile Success" line="20">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-01-31T04:33:27.121070" level="INFO">Creating Session using : alias=GET, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=GET</arg>
+<arg>url=${URL_API}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-31T04:33:27.120896" elapsed="0.000326"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-31T04:33:27.121941" level="INFO">${Headers} = {'x-api-key': 'reqres_b115aaa93cff4447b784a792553a8945'}</msg>
+<var>${Headers}</var>
+<arg>x-api-key=reqres_b115aaa93cff4447b784a792553a8945</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.121599" elapsed="0.000367"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-01-31T04:33:27.221937" level="INFO">GET Request : url=https://reqres.in/api/users/12 
+ path_url=/api/users/12 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_b115aaa93cff4447b784a792553a8945'} 
+ body=None 
+ </msg>
+<msg time="2026-01-31T04:33:27.222064" level="INFO">GET Response : url=https://reqres.in/api/users/12 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 30 Jan 2026 21:33:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"2df-HHCj9pDPNkOf7I/I/j3joCGxiVY"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '19', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=NASGboyY9gzefoUasD14e1wwFJwdO9NYmqHml38BatY%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1769807570"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=NASGboyY9gzefoUasD14e1wwFJwdO9NYmqHml38BatY%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1769807570"', 'Server': 'cloudflare', 'Vary': 'Origin, accept-encoding', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '100', 'X-Ratelimit-Remaining': '96', 'X-Ratelimit-Reset': '1769817600', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '42d2d300-019e-cc3c-f4ef-8c464376c40c', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'Age': '1236', 'Cache-Control': 'max-age=14400', 'cf-cache-status': 'HIT', 'Content-Encoding': 'gzip', 'CF-RAY': '9c6416754cdcee46-BKK'} 
+ body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}} 
+ </msg>
+<msg time="2026-01-31T04:33:27.222140" level="INFO">C:\Users\LENOVO\Desktop\ttb_test\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-01-31T04:33:27.222411" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<var>${Response}</var>
+<arg>alias=GET</arg>
+<arg>url=${END_POINT}</arg>
+<arg>expected_status=${Expected_Status}</arg>
+<arg>headers=${Headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.122197" elapsed="0.100242"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-01-31T04:33:27.223638" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>first=${Expected_Id}</arg>
+<arg>second=${Response.json()}[data][id]</arg>
+<arg>msg=❌ Id did not match ==&gt; Expected ID: ${Expected_Id} != Actual ID: ${Response.json()}[data][id]</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.222688" elapsed="0.001005"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>first=${Expected_Email}</arg>
+<arg>second=${Response.json()}[data][email]</arg>
+<arg>msg=❌ Email did not match ==&gt; Expected ID: ${Expected_Id} != Actual ID: ${Response.json()}[data][email]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.223890" elapsed="0.000826"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>first=${Expected_Firstname}</arg>
+<arg>second=${Response.json()}[data][first_name]</arg>
+<arg>msg=❌ Firstname did not match ==&gt; Expected ID: ${Expected_Id} != Actual ID: ${Response.json()}[data][first_name]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.224907" elapsed="0.000808"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>first=${Expected_Lastname}</arg>
+<arg>second=${Response.json()}[data][last_name]</arg>
+<arg>msg=❌ Lastname did not match ==&gt; Expected ID: ${Expected_Id} != Actual ID: ${Response.json()}[data][last_name]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.225908" elapsed="0.000805"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>first=${Expected_Avatar}</arg>
+<arg>second=${Response.json()}[data][avatar]</arg>
+<arg>msg=❌ Avatar did not match ==&gt; Expected ID: ${Expected_Id} != Actual ID: ${Response.json()}[data][avatar]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-31T04:33:27.226903" elapsed="0.000802"/>
+</kw>
+<doc>Owner : Tawan Duangchit
+|    ***| Objective |***
+|    To verify get user profile api will return correct data when trying to get profile of existing user
+==&gt;</doc>
+<status status="PASS" start="2026-01-31T04:33:27.120146" elapsed="0.107769"/>
+</test>
+<status status="PASS" start="2026-01-31T04:33:27.030256" elapsed="0.198414"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TEST1" id="s1" pass="1" fail="0" skip="0">TEST1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-31T04:33:27.118692" level="ERROR">Error in file 'C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3\TEST1.robot' on line 3: Variable file 'C:\Users\LENOVO\Desktop\ttb_test\Tests\Test_3\Configure.yml' does not exist.</msg>
+</errors>
+</robot>
