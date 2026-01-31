@@ -9,6 +9,12 @@ pipeline {
             }
         }
 
+        stage('Install Python') {
+            steps {
+                sh "apt-get update && apt-get install -y python3 python3-pip"
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 // ตรวจสอบและติดตั้ง Library ที่จำเป็น
