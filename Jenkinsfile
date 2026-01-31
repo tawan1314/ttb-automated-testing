@@ -4,14 +4,22 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // ดึงโค้ดจากลิงก์ที่คุณให้มา
-                git url: 'https://github.com/tawan1314/ttb-automated-testing.git', branch: 'main'
+                // ดึงโค้ดล่าสุดจาก Git
+                checkout scm
             }
         }
 
-        stage('Run Robot Framework') {
+        stage('Install Dependencies') {
             steps {
-                // รันไฟล์ TEST1.robot ตามโครงสร้างโฟลเดอร์ใน GitHub
+                // ตรวจสอบและติดตั้ง Library ที่จำเป็น
+                bat "pip install robotframework"
+                bat "pip install robotframework-browser"
+            }
+        }
+
+        stage('Run Robot Test') {
+            steps {
+                // รันไฟล์ TEST1.robot ตาม Path ใน Repository ของคุณ
                 bat "python -m robot -d results Tests/Test_2/TEST1.robot"
             }
         }
@@ -19,19 +27,11 @@ pipeline {
 
     post {
         always {
-            // สั่งให้ Jenkins เก็บ Report มาแสดงผล
-            script {
-                try {
-                    step([$class: 'RobotPublisher',
-                        outputPath: 'results',
-                        outputFileName: 'output.xml',
-                        reportFileName: 'report.html',
-                        logFileName: 'log.html'
-                    ])
-                } catch (e) {
-                    echo "ไม่พบไฟล์ Report หรือยังไม่ได้ลง Plugin Robot"
-                }
-            }
+            // เก็บผลลัพธ์และแสดง Report บนหน้า Jenkins
+            archiveArtifacts artifacts: 'results/*.html', allowEmptyArchive: true
+            
+            // ถ้าลง Plugin Robot Framework ไว้ ให้ใช้บรรทัดนี้:
+            // step([$class: 'RobotPublisher', outputPath: 'results', outputFileName: 'output.xml', reportFileName: 'report.html', logFileName: 'log.html'])
         }
     }
 }
