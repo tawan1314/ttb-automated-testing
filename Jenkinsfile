@@ -1,28 +1,34 @@
 pipeline {
-    // สั่งให้ Jenkins ไปดึง Image python มาใช้รัน stage ต่างๆ
-    agent {
-        docker { 
-            image 'python:3.12' 
-        }
-    }
+    agent any
 
     stages {
-        stage('Install & Run Robot') {
+        stage('Install Environment') {
             steps {
+                // พยายามติดตั้ง Python3 และ Pip ลงในตัวเครื่อง Jenkins โดยตรง
                 sh """
-                # ใน image python จะมี pip และ python มาให้เลย
-                pip install robotframework robotframework-browser
-                
-                # รัน robot โดยระบุ path ไฟล์ของคุณ
-                python -m robot -d results Tests/Test_2/TEST1.robot
+                apt-get update
+                apt-get install -y python3 python3-pip
                 """
+            }
+        }
+
+        stage('Install Robot Libraries') {
+            steps {
+                // ติดตั้ง Library ที่จำเป็น
+                sh "python3 -m pip install --user --break-system-packages robotframework robotframework-requests"
+            }
+        }
+
+        stage('Run Robot Test') {
+            steps {
+                // รันคำสั่งทดสอบ
+                sh "python3 -m robot -d results Tests/Test_2/TEST1.robot"
             }
         }
     }
 
     post {
         always {
-            // เก็บ Report ออกมาดูข้างนอก container
             archiveArtifacts artifacts: 'results/*.html', allowEmptyArchive: true
         }
     }
